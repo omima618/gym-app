@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Footer from './components/Footer';
+import GymActions from './components/GymActions';
+import GymList from './components/GymList';
+import Navbar from './components/Navbar';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { requests } from './app/features/gymSlice';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(requests.getAllGyms());
+    }, []);
+    return (
+        <>
+            <Navbar />
+            <GymActions />
+            <main>
+                <GymList />
+            </main>
+            <Footer />
+        </>
+    );
 }
 
 export default App;

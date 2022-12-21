@@ -1,0 +1,27 @@
+.filter-bar {
+    width: 50%;
+}
+.filter-bar input {
+    box-shadow: 2px 2px 6px 0 rgb(0 0 0 / 30%);
+}
+.filter-bar .filter-btn {
+    right: 170px;
+}
+.filter-bar .sec-btn {
+    font-size: 24px !important;
+    padding: 17px 24px !important;
+    border-radius: 0 8px 8px 0 !important;
+    -webkit-border-radius: 0 8px 8px 0 !important;
+    -moz-border-radius: 0 8px 8px 0 !important;
+    -ms-border-radius: 0 8px 8px 0 !important;
+    -o-border-radius: 0 8px 8px 0 !important;
+}
+@media (max-width: 991px) {
+    .filter-bar {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .toggle-map-btn {
+        width: 100%;
+    }
+}
